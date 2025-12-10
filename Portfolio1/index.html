@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Dashboards Power BI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-chart-line text-blue-600 text-2xl"></i>
+                    <h1 class="text-2xl font-bold text-gray-800">Power BI Portfolio</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Home</a>
+                    <a href="#dashboards" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Dashboards</a>
+                    <a href="#about" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Sobre</a>
+                    <a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Contato</a>
+                </nav>
+                <button id="menu-btn" class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="#home" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Home</a>
+                <a href="#dashboards" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Dashboards</a>
+                <a href="#about" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Sobre</a>
+                <a href="#contact" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Dashboards Inteligentes para Tomada de Decisão</h2>
+                    <p class="text-xl mb-8 text-blue-100">Visualizações de dados profissionais que transformam números em insights acionáveis.</p>
+                    <div class="flex space-x-4">
+                        <a href="#dashboards" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition duration-300">Ver Portfólio</a>
+                        <a href="#contact" class="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition duration-300">Contato</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-full max-w-lg">
+                        <div class="absolute -top-6 -left-6 w-32 h-32 bg-blue-400 rounded-full opacity-20"></div>
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-400 rounded-full opacity-20"></div>
+                        <div class="relative bg-white p-1 rounded-xl shadow-xl">
+                            <div class="powerbi-container">
+                                <div class="powerbi-placeholder">
+                                    <div class="text-center">
+                                        <i class="fas fa-chart-pie"></i>
+                                        <p>Dashboard de Demonstração</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Portfolio Section -->
+    <section id="dashboards" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Meus Dashboards</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore meus projetos de Business Intelligence desenvolvidos com Power BI. Cada dashboard foi cuidadosamente projetado para fornecer insights claros e acionáveis.</p>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center mb-10 gap-2 md:gap-4">
+                <button class="filter-btn px-4 py-2 rounded-full bg-blue-600 text-white font-medium" data-filter="all">Todos</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium hover:bg-gray-300" data-filter="vendas">Vendas</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium hover:bg-gray-300" data-filter="financeiro">financeiro</button>
+                
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium hover:bg-gray-300" data-filter="rh">RH</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium hover:bg-gray-300" data-filter="logistica">Logística</button>
+            </div>
+            
+            <!-- Dashboard List (one below the other) -->
+            <div class="space-y-12">
+                <!-- Dashboard 1 -->
+                <div class="dashboard-item bg-white rounded-xl shadow-md overflow-hidden" data-category="logistica">
+                    <div class="powerbi-container">
+                        <iframe class="powerbi-iframe" title="Mini-Projeto4-Parte2" src="https://app.powerbi.com/view?r=eyJrIjoiNzg3OTcyY2QtNTY2ZC00ZGY1LTgwNDgtYmJiMzc4YTU4NjI4IiwidCI6ImU0MjEzZTc4LTk2MWItNDY0Ny1hZDA4LWIyODMzYjI2NGZmYSJ9" frameborder="0" allowFullScreen="true"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Análise de Dados de Logística</h3>
+                        <p class="text-gray-600 mb-4">Total Entregas, Total Entregas no Prazo, Percentual de Entregas Por Equipe, Vendedor, Total De Entregas, Rating, Total de Entregas No Prazo Por Canal de Entrega, Total de Entregas Por Mês, Percentual de Entregas Por Status, Cidade, Entregas com atraso </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Power BI</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Power Query</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Excel</span>
+                        </div>
+                    </div>
+                </div>   
+
+
+                               
+                
+                <!-- Dashboard 2 -->
+                <div class="dashboard-item bg-white rounded-xl shadow-md overflow-hidden" data-category="vendas">
+                    <div class="powerbi-container">
+                        <iframe class="powerbi-iframe"  title="RELATORIO_VENDAS"  src="https://app.powerbi.com/view?r=eyJrIjoiMTEzZTRmMDYtNTE0My00YTRkLThmNWMtM2I0YzBmOTUxNGQxIiwidCI6ImU0MjEzZTc4LTk2MWItNDY0Ny1hZDA4LWIyODMzYjI2NGZmYSJ9" frameborder="0" allowFullScreen="true"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2"> relatório Vendas </h3>
+                        <p class="text-gray-600 mb-4">Faturamento Total, Qtd Vendida, Lucro Total , Qtd Clientes, Faturamento Por Mês, Faturamento por marca, Faturamento por continente</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Power BI</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Power Query</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Excel</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dashboard 3 -->
+                <div class="dashboard-item bg-white rounded-xl shadow-md overflow-hidden" data-category="rh">
+                    <div class="powerbi-container">
+                        <iframe class="powerbi-iframe" title="RH"  src="https://app.powerbi.com/view?r=eyJrIjoiNDNiYTZjMWUtZjJlYy00OTk1LTlmYzEtM2JhMTIyMmZhZTBjIiwidCI6ImU0MjEzZTc4LTk2MWItNDY0Ny1hZDA4LWIyODMzYjI2NGZmYSJ9" frameborder="0" allowFullScreen="true"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">analise de funcionarios RH</h3>
+                        <p class="text-gray-600 mb-4">Total funcionarios, Total funcionarios Femenina, Total funcionarios masculino, Media salarial, Medias anos experiência, % masculino, % Femenina, Idade, Total de funcionarios por funçao , total de funcionarios por personalizar, total de funcionarios Disponivel para hora extra</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Power BI</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">DAX</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Excel</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dashboard 4 -->
+                <div class="dashboard-item bg-white rounded-xl shadow-md overflow-hidden" data-category="vendas">
+                    <div class="powerbi-container">
+                        <iframe class="powerbi-iframe" title="dashboardvendas" src="https://app.powerbi.com/view?r=eyJrIjoiMDgyNzFkY2MtMWI1ZS00MjU4LWI2NDQtN2YzY2I1Mjc3YTQ3IiwidCI6ImU0MjEzZTc4LTk2MWItNDY0Ny1hZDA4LWIyODMzYjI2NGZmYSJ9" frameborder="0" allowFullScreen="true"></iframe>
+                     </div>   
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Análise de Vendas de produtos vendidos na Loja</h3>
+                        <p class="text-gray-600 mb-4">Total de valor de venda,  Total de quantidade vendida, Total de custo Envior, Quantidade vendida por categoria, Quantidade vendida por prioridade Pedido, Quantidade vendida por subCategoria, Quantidade vendida por ano, contagem de Prioridade Pedido por modo envio, Nome produto  </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Power BI</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">DAX</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">CSS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- Dashboard 5 -->
+                <div class="dashboard-item bg-white rounded-xl shadow-md overflow-hidden" data-category="vendas">
+                    <div class="powerbi-container">
+                        <iframe class="powerbi-iframe" title="borafilhodedeus" src="https://app.powerbi.com/view?r=eyJrIjoiYzBhY2MwMjktMmRlZC00MWQ4LWI0NGItNTk2N2IzMTNmYWM1IiwidCI6ImU0MjEzZTc4LTk2MWItNDY0Ny1hZDA4LWIyODMzYjI2NGZmYSJ9" frameborder="0" allowFullScreen="true"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Análise de Custos e Vendas</h3>
+                        <p class="text-gray-600 mb-4">Soma de Valor Venda por Estado, Soma de Valor Venda por Segmento, Total vendas, Soma de Custo, Contagem de Produto e Soma de Valor Venda por Loja, Soma de Valor Venda por Ano, Produtos, Somar de Valor venda, Vendedor, Soma de comissão(Porcentual), Soma de Valor Venda por Categoria, Soma de Valor Venda por Fabricante</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Power BI</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">DAX</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">CSS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dashboard 6 -->
+                <div class="dashboard-item bg-white rounded-xl shadow-md overflow-hidden" data-category="vendas">
+                    <div class="powerbi-container">
+                        <iframe class="powerbi-iframe" title="Dados transacionais de um varejista global fictício de eletrônicos" src="https://app.powerbi.com/view?r=eyJrIjoiZjYyNmQwYjItOGIxZi00MWU0LTg3ZTAtZTM3YzAwNTBmYjc2IiwidCI6ImU0MjEzZTc4LTk2MWItNDY0Ny1hZDA4LWIyODMzYjI2NGZmYSJ9" allowFullScreen="true"></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Dados transacionais de um varejista global fictício de eletrônicos</h3>
+                        <p class="text-gray-600 mb-4">Total de itens comprados por Gender, Total de Produtos vendidos, vendas por Category, vendas por marca, vendas por cor, Desempenho de Vendas ao Longo do Tempo,  Subcategory, total de cada produto comprado, Vendas Por Continente, País, Estado, Cidade, Total vendas</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Power BI</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs px-3 py-1 rounded-full">Google Analytics</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">DAX</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs px-3 py-1 rounded-full">Excel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 bg-blue-100 rounded-full overflow-hidden shadow-lg">
+                            <img src="imagens/foto.jpeg" alt="Analista de BI" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-5 -right-5 bg-white p-3 rounded-full shadow-md">
+                            <i class="fas fa-chart-line text-blue-600 text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Sobre Mim</h2>
+                    <p class="text-gray-600 mb-6 text-lg">Sou um profissional de Business Intelligence com mais de 1 ano de experiência desenvolvendo dashboards e relatórios analíticos no Power BI. Minha especialidade é transformar dados complexos em visualizações claras e intuitivas que facilitam a tomada de decisão.</p>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Minhas Habilidades</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Power BI</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>DAX</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Power Query</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>SQL</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Modelagem de Dados</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>python</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Certificações</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <i class="fas fa-award text-yellow-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Microsoft Power BI Para Business Intelligence e Data Science</h4>
+                                    <p class="text-gray-600 text-sm">2024</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-award text-yellow-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Data Science Academy</h4>
+                                    <p class="text-gray-600 text-sm">2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Entre em Contato</h2>
+                <p class="text-blue-100 max-w-2xl mx-auto">Interessado em meus serviços de desenvolvimento de dashboards? Preencha o formulário abaixo ou entre em contato diretamente por e-mail ou telefone.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row w-full max-w-6xl mx-auto">
+                <div class="w-full">
+                    <div class="bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm border border-white border-opacity-20">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                            <!-- Informações de Contato -->
+                            <div>
+                                <h3 class="text-2xl font-bold mb-8 text-white">Informações de Contato</h3>
+                                
+                                <div class="space-y-8">
+                                    <div class="flex items-start p-4 rounded-lg bg-white bg-opacity-5 hover:bg-opacity-10 transition-all duration-300">
+                                        <div class="w-12 h-12 rounded-full bg-blue-500 bg-opacity-20 flex items-center justify-center mr-4">
+                                            <i class="fas fa-envelope text-blue-300 text-lg"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <h4 class="font-semibold text-gray-200 mb-1">E-mail</h4>
+                                            <a href="mailto:renato065157@gmail.com" class="text-blue-200 hover:text-blue-100 transition-colors text-lg">
+                                                renato065157@gmail.com
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start p-4 rounded-lg bg-white bg-opacity-5 hover:bg-opacity-10 transition-all duration-300">
+                                        <div class="w-12 h-12 rounded-full bg-blue-500 bg-opacity-20 flex items-center justify-center mr-4">
+                                            <i class="fas fa-phone-alt text-blue-300 text-lg"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <h4 class="font-semibold text-gray-200 mb-1">Telefone</h4>
+                                            <a href="tel:+5519987790800" class="text-blue-200 hover:text-blue-100 transition-colors text-lg">
+                                                +55 (19) 98779-0800
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start p-4 rounded-lg bg-white bg-opacity-5 hover:bg-opacity-10 transition-all duration-300">
+                                        <div class="w-12 h-12 rounded-full bg-blue-500 bg-opacity-20 flex items-center justify-center mr-4">
+                                            <i class="fas fa-map-marker-alt text-blue-300 text-lg"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <h4 class="font-semibold text-gray-200 mb-1">Localização</h4>
+                                            <p class="text-blue-200 text-lg">São Paulo, Brasil</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Redes Sociais -->
+                            <div>
+                                <h3 class="text-2xl font-bold mb-8 text-white">Redes Sociais</h3>
+                                
+                                <div class="grid grid-cols-2 gap-4">
+                                    <a href="#" class="p-5 rounded-xl bg-white bg-opacity-5 hover:bg-opacity-10 transition-all duration-300 group flex flex-col items-center justify-center">
+                                        <div class="w-14 h-14 rounded-full bg-blue-500 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                                            <i class="fab fa-linkedin-in text-white text-xl"></i>
+                                        </div>
+                                        <span class="font-medium text-gray-200">LinkedIn</span>
+                                    </a>
+                                    
+                                    <a href="#" class="p-5 rounded-xl bg-white bg-opacity-5 hover:bg-opacity-10 transition-all duration-300 group flex flex-col items-center justify-center">
+                                        <div class="w-14 h-14 rounded-full bg-blue-500 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                                            <i class="fab fa-github text-white text-xl"></i>
+                                        </div>
+                                        <span class="font-medium text-gray-200">GitHub</span>
+                                    </a>
+                                    
+                                    <a href="#" class="p-5 rounded-xl bg-white bg-opacity-5 hover:bg-opacity-10 transition-all duration-300 group flex flex-col items-center justify-center">
+                                        <div class="w-14 h-14 rounded-full bg-blue-500 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                                            <i class="fab fa-instagram text-white text-xl"></i>
+                                        </div>
+                                        <span class="font-medium text-gray-200">Instagram</span>
+                                    </a>
+                                    
+                                    <a href="#" class="p-5 rounded-xl bg-white bg-opacity-5 hover:bg-opacity-10 transition-all duration-300 group flex flex-col items-center justify-center">
+                                        <div class="w-14 h-14 rounded-full bg-blue-500 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                                            <i class="fab fa-twitter text-white text-xl"></i>
+                                        </div>
+                                        <span class="font-medium text-gray-200">Twitter</span>
+                                    </a>
+                                </div>
+                                
+                                <div class="mt-10 p-6 rounded-xl bg-blue-500 bg-opacity-10 border border-blue-400 border-opacity-30">
+                                    <h4 class="font-semibold text-white mb-2">Disponibilidade</h4>
+                                    <p class="text-blue-100">Aberto para novas oportunidades e colaborações</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Barra decorativa -->
+                        <div class="mt-10 pt-6 border-t border-white border-opacity-20">
+                            <div class="flex flex-col sm:flex-row justify-between items-center">
+                                <p class="text-blue-100 text-center sm:text-left mb-4 sm:mb-0">
+                                    Entre em contato para projetos e parcerias
+                                </p>
+                                <button class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg transition-colors duration-300">
+                                    Enviar Mensagem
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+                
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-chart-line text-blue-400 text-xl"></i>
+                        <span class="text-xl font-bold">Power BI Portfolio</span>
+                    </div>
+                    <p class="text-gray-400 mt-2">Transformando dados em insights valiosos.</p>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-end">
+                    <p class="text-gray-400 mb-2">© 2025 Power BI Portfolio. Todos os direitos reservados.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">Termos de Serviço</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">Política de Privacidade</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
